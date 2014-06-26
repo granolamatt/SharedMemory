@@ -87,6 +87,8 @@ int posix_synchronized(sem_t *sem_id) {
         	perror("sem_wait");
             return -2;
         }
+    } else {
+        return -1;
     }
     return 0;
 }
